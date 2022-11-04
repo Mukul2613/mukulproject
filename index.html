@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 50px;
+  font-weight: bold;
+  position: relative;
+  animation: mymove 10s infinite;
+}
+body{
+    background-image: url('hitimage.jpg');
+    animation: color 5s infinite linear;
+    padding: 2em;
+
+}
+
+
+@keyframes color {
+  0%   { background-image: url('hittimage2.jfif');}
+  25%  { background-image: url('hitimage3.jfif'); }
+  50%  { background-image: url('hitimage4.jfif'); }
+  75%  { background-image: url('hitimage5.jfif'); }
+  100% {background-image: url('hitimage.jpg');}
+
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+button{
+  position: relative;
+  height: 15vh;
+  width: 20vw;
+  margin-top: 7vw;
+  border-radius: 5vw;
+  border: none;
+  outline: none;
+  background:rgb(9, 9, 47);
+  color: #fff;
+  font-size: x-large;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border: 5px solid black;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.5s;
+  text-transform:bold;
+}
+button:first-child:hover{
+  background: linear-gradient(90deg, #6dc8ec, #e989bf, #0fdb75, #e12720);
+  background-size: 400%;
+  color:black;
+}
+button:last-child:hover{
+  background: linear-gradient(90deg, #e37c9b, #dcdc27, #4ee6e6, #5aeb70);
+  background-size: 400%;
+  color:black;
+}
+button:first-child:before,
+button:last-child:before{
+  content: '';
+  position: absolute;
+  background: inherit;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 50px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+button:first-child:hover:before,
+button:last-child:hover:before{
+  opacity: 1;
+  z-index: -1;
+}
+button:hover{
+  z-index: 1;
+  animation: glow 8s linear infinite;
+}
+@keyframes glow {
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}    
+p{
+    color: black;
+}
+
+</style>
+</head>
+<body>
+<p>
+    <b>
+        <center>
+            <button class="button" onclick="window.location.href = 'levels.html';">START GAME</button>
+        </center>
+    </b>
+</p>
+
+<p>
+  <b>
+      <center>
+          <button class="button" onclick="window.location.href = 'help.html';">HELP</button>
+      </center>
+  </b>
+</p>
+</body>
+</html>
+
+
